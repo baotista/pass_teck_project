@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block head_title %}PassTeck | Eleves Manager : liste des sections{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+<h1>{{ section.nom_section }} :</h1>
+
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% endblock %}

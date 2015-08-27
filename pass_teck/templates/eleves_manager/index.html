@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head_title %}PassTeck | Eleves Manager{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    {% if eleves_list %}
+        <ul>
+        {% for eleve in eleves_list %}
+        <li><a href="{% url 'eleves_manager:detail' eleve.id %}">{{ eleve.nom_elv }} {{eleve.pnom_elv}}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucun élève n'est enregistré.</p>
+    {% endif %}
+
+  </div>
+</div>
+{% endblock %}

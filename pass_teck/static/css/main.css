@@ -5,5 +5,10 @@
    ========================================================================== */
 
    .jumbotron h1 {
-       color: rgba(200, 50, 255, 1);
+       color: rgba(110, 110, 110, 1);
    }
+
+.jumbotron .btn-primary {
+  background-color: rgb(43, 129, 171);
+  border-color: rgb(43, 129, 171);
+}

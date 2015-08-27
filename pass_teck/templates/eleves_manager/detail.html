@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block head_title %}PassTeck | Eleves Manager : details sur un élève{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+<h1>{{ eleve.pnom_elv }} {{ eleve.nom_elv }} :</h1>
+
+<p>
+  Date de naissance : {{ eleve.dnaiss_elv }}
+</p>
+<p>
+  Adresse mail : {{ eleve.mail_elv }}
+</p>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% endblock %}

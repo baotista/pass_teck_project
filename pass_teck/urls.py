@@ -19,5 +19,6 @@ from .views import home
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^eleves_manager/', include('eleves_manager.urls', namespace = "eleves_manager")),
     url(r'^$', home, name='home'),
 ]
