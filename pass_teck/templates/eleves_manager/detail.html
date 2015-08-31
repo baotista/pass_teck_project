@@ -5,14 +5,27 @@
 {% block content %}
 <div class="container">
   <div class="row">
-<h1>{{ eleve.pnom_elv }} {{ eleve.nom_elv }} :</h1>
-
-<p>
-  Date de naissance : {{ eleve.dnaiss_elv }}
-</p>
-<p>
-  Adresse mail : {{ eleve.mail_elv }}
-</p>
+    <h1>{{ eleve.pnom_elv }} {{ eleve.nom_elv }} :</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <p>
+        Date de naissance : {{ eleve.dnaiss_elv }}
+      </p>
+      <p>
+        Adresse mail : <a class="btn btn-info" role="button" href="mailto:{{ eleve.mail_elv }}">{{ eleve.mail_elv }}</a>
+      </p>
+    </div>
+    <div class="col-md-6">
+      <p>
+        Classe : {{ eleve.classe_elv}}
+      </p>
+      <p>
+        Section : {{eleve.classe_elv.sec_cls}}
+      </p>
+    </div>
+  </div>
+</div>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 

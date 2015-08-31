@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views import generic
 
-from .models import Eleve, Section, Annee
+from .models import Eleve
 # Create your views here.
 
 
@@ -19,7 +19,3 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Eleve
     template_name = 'eleves_manager/detail.html'
-
-'''class SectionView(generic.DetailView):
-    model = Section
-    template_name = 'eleves_manager/section.html''''
